@@ -1,0 +1,835 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Colleague",
+    "version": "1.0.0",
+    "description": "Employees use this API to view coworker data or search for fellow employees.",
+    "termsOfService": ""
+  },
+  "servers": [
+    {
+      "url": "https://10.250.200.153:8443/collea",
+      "description": "",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/api/v1/colleague": {
+      "post": {
+        "operationId": "colleague",
+        "tags": [],
+        "description": "",
+        "summary": "",
+        "externalDocs": {
+          "url": "",
+          "description": ""
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/xusernik"
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colleague_api_request"
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Colleague_api_response"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false,
+        "security": [],
+        "servers": [],
+        "callbacks": {}
+      },
+      "servers": [],
+      "parameters": [],
+      "x-description": ""
+    }
+  },
+  "components": {
+    "schemas": {
+      "Colleague_api_response": {
+        "pattern": "",
+        "uniqueItems": false,
+        "type": "object",
+        "allOf": [],
+        "oneOf": [],
+        "anyOf": [],
+        "properties": {
+          "total": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "number",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": 1,
+            "deprecated": false
+          },
+          "page": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "number",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": 1,
+            "deprecated": false
+          },
+          "pages": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "number",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": 1,
+            "deprecated": false
+          },
+          "data": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "array",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "items": {
+              "pattern": "",
+              "uniqueItems": false,
+              "type": "object",
+              "allOf": [],
+              "oneOf": [],
+              "anyOf": [],
+              "properties": {
+                "person_id": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "401614",
+                  "deprecated": false
+                },
+                "nik": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "94158",
+                  "deprecated": false
+                },
+                "nama": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "M. Afif Giffari",
+                  "deprecated": false
+                },
+                "email": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "m_a_giffari@telkomsel.co.id",
+                  "deprecated": false
+                },
+                "no_hp": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "628119719946",
+                  "deprecated": false
+                },
+                "title": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Supervisor - Household Consumer Operations Territory Jakarta Pusat Selatan",
+                  "deprecated": false
+                },
+                "tanggal_masuk": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "2018-06-01",
+                  "deprecated": false
+                },
+                "employee_category": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "PERMANENT",
+                  "deprecated": false
+                },
+                "job": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Section Head Direct Sales Operation",
+                  "deprecated": false
+                },
+                "department": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Household Consumer Branch Southern Jakarta Department",
+                  "deprecated": false
+                },
+                "section": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Household Consumer Operations Territory Jakarta Pusat Selatan Section",
+                  "deprecated": false
+                },
+                "division": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Consumer Business Region Central Jabotabek Division",
+                  "deprecated": false
+                },
+                "group": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Consumer Business Area Jabotabek Jabar Group",
+                  "deprecated": false
+                },
+                "egroup": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Consumer Business Operations Group",
+                  "deprecated": false
+                },
+                "directorate": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Sales Directorate",
+                  "deprecated": false
+                },
+                "area": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "AREA 2",
+                  "deprecated": false
+                },
+                "region": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "JABOTABEK SALES CS",
+                  "deprecated": false
+                },
+                "location": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Branch Jakarta",
+                  "deprecated": false
+                },
+                "kota": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Jakarta Pusat",
+                  "deprecated": false
+                },
+                "status": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "AKTIF",
+                  "deprecated": false
+                },
+                "nik_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "71329",
+                  "deprecated": false
+                },
+                "nama_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Buang Santoso",
+                  "deprecated": false
+                },
+                "title_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "Manager - Household Consumer Branch Southern Jakarta",
+                  "deprecated": false
+                },
+                "no_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "6281190090288",
+                  "deprecated": false
+                },
+                "email_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "buang_santoso@telkomsel.co.id",
+                  "deprecated": false
+                },
+                "cn_atasan": {
+                  "pattern": "",
+                  "uniqueItems": false,
+                  "type": "string",
+                  "allOf": [],
+                  "oneOf": [],
+                  "anyOf": [],
+                  "properties": {},
+                  "description": "",
+                  "format": "",
+                  "nullable": false,
+                  "readOnly": false,
+                  "writeOnly": false,
+                  "externalDocs": {
+                    "url": "",
+                    "description": ""
+                  },
+                  "example": "buang_santoso",
+                  "deprecated": false
+                }
+              },
+              "description": "",
+              "format": "",
+              "nullable": false,
+              "readOnly": false,
+              "writeOnly": false,
+              "externalDocs": {
+                "url": "",
+                "description": ""
+              },
+              "deprecated": false
+            },
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "deprecated": false
+          }
+        },
+        "description": "",
+        "format": "",
+        "nullable": false,
+        "readOnly": false,
+        "writeOnly": false,
+        "externalDocs": {
+          "url": "",
+          "description": ""
+        },
+        "deprecated": false
+      },
+      "Colleague_api_request": {
+        "pattern": "",
+        "uniqueItems": false,
+        "type": "object",
+        "allOf": [],
+        "oneOf": [],
+        "anyOf": [],
+        "properties": {
+          "keyword": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "string",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": "Solution Development Chapter Team",
+            "deprecated": false
+          },
+          "page": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "number",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": 1,
+            "deprecated": false
+          },
+          "limit": {
+            "pattern": "",
+            "uniqueItems": false,
+            "type": "number",
+            "allOf": [],
+            "oneOf": [],
+            "anyOf": [],
+            "properties": {},
+            "description": "",
+            "format": "",
+            "nullable": false,
+            "readOnly": false,
+            "writeOnly": false,
+            "externalDocs": {
+              "url": "",
+              "description": ""
+            },
+            "example": 10,
+            "deprecated": false
+          }
+        },
+        "description": "",
+        "format": "",
+        "nullable": false,
+        "readOnly": false,
+        "writeOnly": false,
+        "externalDocs": {
+          "url": "",
+          "description": ""
+        },
+        "deprecated": false
+      }
+    },
+    "responses": {},
+    "parameters": {
+      "xusernik": {
+        "name": "xusernik",
+        "in": "header",
+        "description": "",
+        "required": true,
+        "deprecated": false,
+        "allowEmptyValue": false,
+        "explode": false,
+        "allowReserved": false,
+        "schema": {
+          "pattern": "",
+          "uniqueItems": false,
+          "type": "string",
+          "allOf": [],
+          "oneOf": [],
+          "anyOf": [],
+          "properties": {},
+          "description": "",
+          "format": "",
+          "default": "",
+          "nullable": false,
+          "readOnly": false,
+          "writeOnly": false,
+          "externalDocs": {
+            "url": "",
+            "description": ""
+          },
+          "deprecated": false
+        },
+        "example": "90230"
+      }
+    },
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {},
+    "links": {},
+    "callbacks": {}
+  },
+  "security": [],
+  "tags": [],
+  "externalDocs": {
+    "url": "",
+    "description": ""
+  }
+}
